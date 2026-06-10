@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.day {
+    margin-bottom: 40px;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photos img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+}
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.photos img:hover {
+    opacity: 0.9;
+}
