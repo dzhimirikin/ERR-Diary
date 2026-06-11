@@ -9,10 +9,37 @@ async function loadDiary() {
     const gallery =
         document.getElementById("gallery");
 
+    const title =
+        document.getElementById("project-title");
+
+    const info =
+        document.getElementById("project-info");
+
+    title.textContent =
+        data.project.toUpperCase();
+
     const days =
         Object.keys(data.days)
-              .sort()
-              .reverse();
+              .sort();
+
+    let photoCount = 0;
+
+    for (const day of days) {
+        photoCount +=
+            data.days[day].length;
+    }
+
+    const firstDay =
+        days[0];
+
+    const lastDay =
+        days[days.length - 1];
+
+    info.innerHTML =
+        `${firstDay} — ${lastDay}<br>` +
+        `${photoCount} photos`;
+
+    days.reverse();
 
     for (const day of days) {
 
